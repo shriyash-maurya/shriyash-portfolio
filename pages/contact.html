@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Shriyash Kumar Maurya</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body data-page="contact">
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <nav class="navbar">
+    <a class="nav-logo" href="../index.html">SKM<span>.</span></a>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="../index.html"       data-page="home">Home</a></li>
+      <li><a href="about.html"          data-page="about">About</a></li>
+      <li><a href="resume.html"         data-page="resume">Resume</a></li>
+      <li><a href="projects.html"       data-page="projects">Projects</a></li>
+      <li><a href="certificates.html"   data-page="certificates">Certificates</a></li>
+      <li><a href="blog.html"           data-page="blog">Blog</a></li>
+      <li><a href="testimonials.html"   data-page="testimonials">Testimonials</a></li>
+      <li><a href="contact.html"        data-page="contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-status"><div class="status-dot"></div>Available for Work</div>
+      <button class="nav-hamburger" id="nav-toggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+    <div class="container">
+
+      <div class="section-head reveal">
+        <div class="section-eyebrow">07 — Contact</div>
+        <h1 class="section-title">Get In <em>Touch</em></h1>
+        <p class="section-sub">Open to internships, freelance work, and interesting collaborations.</p>
+      </div>
+
+      <div class="contact-layout">
+
+        <!-- Left: Info -->
+        <div class="contact-intro reveal">
+          <p>Whether you have a project that needs a security audit, want a website built, or just want to talk tech — I'm always open to a good conversation.</p>
+          <p>Currently based in <strong style="color:var(--accent)">Varanasi, Uttar Pradesh</strong> and available for remote work globally. Response time is usually within 24 hours.</p>
+
+          <div class="contact-links">
+            <a class="clink" href="mailto:shriyashkumarmaurya@gmail.com">
+              <div class="clink-icon email">✉</div>
+              <div>
+                <div class="clink-label">Email</div>
+                <div class="clink-value">shriyashkumarmaurya@gmail.com</div>
+              </div>
+            </a>
+            <a class="clink" href="tel:+916386674340">
+              <div class="clink-icon phone">📞</div>
+              <div>
+                <div class="clink-label">Phone</div>
+                <div class="clink-value">+91-6386674340</div>
+              </div>
+            </a>
+            <a class="clink" href="https://linkedin.com/in/shriyash-kumar-maurya-305847362" target="_blank">
+              <div class="clink-icon linkedin">💼</div>
+              <div>
+                <div class="clink-label">LinkedIn</div>
+                <div class="clink-value">linkedin.com/in/shriyash-kumar-maurya</div>
+              </div>
+            </a>
+            <a class="clink" href="https://g.dev/shriyashmaurya" target="_blank">
+              <div class="clink-icon github">⌥</div>
+              <div>
+                <div class="clink-label">Google Dev</div>
+                <div class="clink-value">g.dev/shriyashmaurya — 30+ badges</div>
+              </div>
+            </a>
+            <a class="clink" href="https://tryhackme.com/p/BlackBird47" target="_blank">
+              <div class="clink-icon" style="background:rgba(0,212,255,0.12);color:var(--accent)">🐦‍⬛</div>
+              <div>
+                <div class="clink-label">TryHackMe</div>
+                <div class="clink-value">BlackBird47 — 80+ rooms solved</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form-card reveal delay-2">
+          <h3>Send a Message</h3>
+          <form id="contact-form">
+            <div class="form-group">
+              <label>Your Name *</label>
+              <input type="text" id="c-name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" id="c-email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <input type="text" id="c-subject" placeholder="Project Inquiry / Hire / Collaboration">
+            </div>
+            <div class="form-group">
+              <label>Message *</label>
+              <textarea id="c-msg" rows="5" placeholder="Tell me about your project or inquiry..." required></textarea>
+            </div>
+            <button type="submit" class="btn-send">Send Message →</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <p class="footer-copy">© 2025 <strong>Shriyash Kumar Maurya</strong></p>
+      <nav class="footer-nav">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+      </nav>
+    </footer>
+  </div>
+
+  <div id="toast"></div>
+  <script src="../js/main.js"></script>
+  <script src="../js/contact.js"></script>
+</body>
+</html>

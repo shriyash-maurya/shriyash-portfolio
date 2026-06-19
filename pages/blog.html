@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Shriyash Kumar Maurya</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body data-page="blog">
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <nav class="navbar">
+    <a class="nav-logo" href="../index.html">SKM<span>.</span></a>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="../index.html"       data-page="home">Home</a></li>
+      <li><a href="about.html"          data-page="about">About</a></li>
+      <li><a href="resume.html"         data-page="resume">Resume</a></li>
+      <li><a href="projects.html"       data-page="projects">Projects</a></li>
+      <li><a href="certificates.html"   data-page="certificates">Certificates</a></li>
+      <li><a href="blog.html"           data-page="blog">Blog</a></li>
+      <li><a href="testimonials.html"   data-page="testimonials">Testimonials</a></li>
+      <li><a href="contact.html"        data-page="contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-status"><div class="status-dot"></div>Available for Work</div>
+      <button class="nav-hamburger" id="nav-toggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+    <div class="container">
+
+      <div class="section-head reveal">
+        <div class="section-eyebrow">05 — Blog</div>
+        <h1 class="section-title">My <em>Writings</em></h1>
+        <p class="section-sub">Insights on cyber security, development, and tech careers.</p>
+      </div>
+
+      <div class="blog-layout">
+
+        <!-- Posts -->
+        <div>
+          <div class="blog-list">
+
+            <article class="blog-card reveal">
+              <div class="blog-meta">
+                <span class="blog-cat security">Security</span>
+                <span class="blog-date">Nov 15, 2024</span>
+              </div>
+              <h3 class="blog-title">How I Solved My First CTF Challenge on TryHackMe</h3>
+              <p class="blog-excerpt">A step-by-step walkthrough of the "RootMe" room — from Nmap recon to privilege escalation on a Linux machine. A perfect guide for beginners getting started in CTF.</p>
+              <span class="read-link">Read More →</span>
+            </article>
+
+            <article class="blog-card reveal delay-1">
+              <div class="blog-meta">
+                <span class="blog-cat dev">Dev</span>
+                <span class="blog-date">Sep 28, 2024</span>
+              </div>
+              <h3 class="blog-title">Building a Secure REST API with Node.js and JWT Auth</h3>
+              <p class="blog-excerpt">Security is an afterthought in most API tutorials. This post covers JWT authentication, rate limiting, input sanitization, and CORS hardening from day one.</p>
+              <span class="read-link">Read More →</span>
+            </article>
+
+            <article class="blog-card reveal delay-2">
+              <div class="blog-meta">
+                <span class="blog-cat tips">Tips</span>
+                <span class="blog-date">Aug 10, 2024</span>
+              </div>
+              <h3 class="blog-title">10 Linux Terminal Commands Every Security Researcher Must Know</h3>
+              <p class="blog-excerpt">From netstat to tcpdump and beyond — these terminal commands will save you hours during security assessments. Real examples from my pen testing practice.</p>
+              <span class="read-link">Read More →</span>
+            </article>
+
+            <article class="blog-card reveal">
+              <div class="blog-meta">
+                <span class="blog-cat security">Security</span>
+                <span class="blog-date">Jun 5, 2024</span>
+              </div>
+              <h3 class="blog-title">Understanding SQL Injection — A Practical Guide</h3>
+              <p class="blog-excerpt">SQL injection is still the #1 web vulnerability. This post explains classic, blind, and time-based SQLi with real code examples and how to prevent them properly.</p>
+              <span class="read-link">Read More →</span>
+            </article>
+
+            <!-- Dynamic posts from localStorage -->
+            <div id="dynamic-posts"></div>
+
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="blog-sidebar">
+
+          <!-- Write a Post -->
+          <div class="sidebar-panel reveal">
+            <h4>✍ Write a Post</h4>
+            <form id="blog-form">
+              <div class="form-group">
+                <label>Title</label>
+                <input type="text" id="b-title" placeholder="Your post title...">
+              </div>
+              <div class="form-group">
+                <label>Category</label>
+                <select id="b-cat">
+                  <option value="security">Security</option>
+                  <option value="dev">Dev</option>
+                  <option value="tips">Tips</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Excerpt</label>
+                <textarea id="b-excerpt" rows="4" placeholder="Short description of your post..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%">Publish Post</button>
+            </form>
+          </div>
+
+          <!-- Stats -->
+          <div class="sidebar-panel reveal delay-1">
+            <h4>📊 Stats</h4>
+            <div class="blog-stats">
+              <div class="bstat"><span>🔴 Security Posts</span><span class="bstat-count">4</span></div>
+              <div class="bstat"><span>🔵 Dev Posts</span>     <span class="bstat-count">3</span></div>
+              <div class="bstat"><span>🟢 Tips Posts</span>    <span class="bstat-count">2</span></div>
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div class="sidebar-panel reveal delay-2">
+            <h4>🔗 Find Me Online</h4>
+            <div class="sidebar-links">
+              <a href="#">⬡ GitHub — @shriyash-kumar</a>
+              <a href="#">🏆 TryHackMe Profile</a>
+              <a href="#">💼 LinkedIn Profile</a>
+              <a href="#">📺 YouTube Channel</a>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <p class="footer-copy">© 2025 <strong>Shriyash Kumar Maurya</strong></p>
+      <nav class="footer-nav">
+        <a href="../index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </footer>
+  </div>
+
+  <div id="toast"></div>
+  <script src="../js/main.js"></script>
+  <script src="../js/blog.js"></script>
+</body>
+</html>

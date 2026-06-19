@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificates — Shriyash Kumar Maurya</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <style>
+    .certs-section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2.5rem 0 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .certs-section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .badges-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .badge-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .badge-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .badge-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+    .badge-info { flex: 1; }
+    .badge-name { font-size: 0.85rem; font-weight: 600; color: var(--text); line-height: 1.3; margin-bottom: 0.25rem; }
+    .badge-date { font-size: 0.73rem; color: var(--muted); }
+    .thm-banner {
+      background: linear-gradient(135deg, rgba(0,212,255,0.08), rgba(124,58,237,0.08));
+      border: 1px solid var(--accent);
+      border-radius: 16px;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .thm-icon { font-size: 3rem; }
+    .thm-info h3 { margin: 0 0 0.3rem; font-size: 1.1rem; }
+    .thm-info p { margin: 0; font-size: 0.85rem; color: var(--muted); }
+    .thm-info a { color: var(--accent); text-decoration: none; }
+    .thm-info a:hover { text-decoration: underline; }
+    .thm-stat { display: flex; gap: 1.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .thm-stat-item { text-align: center; }
+    .thm-stat-num { font-size: 1.4rem; font-weight: 800; color: var(--accent); display: block; }
+    .thm-stat-lbl { font-size: 0.72rem; color: var(--muted); }
+  </style>
+</head>
+<body data-page="certificates">
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <nav class="navbar">
+    <a class="nav-logo" href="../index.html">SKM<span>.</span></a>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="../index.html"       data-page="home">Home</a></li>
+      <li><a href="about.html"          data-page="about">About</a></li>
+      <li><a href="resume.html"         data-page="resume">Resume</a></li>
+      <li><a href="projects.html"       data-page="projects">Projects</a></li>
+      <li><a href="certificates.html"   data-page="certificates">Certificates</a></li>
+      <li><a href="blog.html"           data-page="blog">Blog</a></li>
+      <li><a href="testimonials.html"   data-page="testimonials">Testimonials</a></li>
+      <li><a href="contact.html"        data-page="contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-status"><div class="status-dot"></div>Available for Work</div>
+      <button class="nav-hamburger" id="nav-toggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+    <div class="container">
+
+      <div class="section-head reveal">
+        <div class="section-eyebrow">04 — Certificates & Badges</div>
+        <h1 class="section-title">My <em>Credentials</em></h1>
+        <p class="section-sub">Professional certifications, Google Developer badges, and platform achievements.</p>
+      </div>
+
+      <!-- Official Certifications -->
+      <div class="certs-section-title reveal">🎓 Official Certifications</div>
+      <div class="certs-grid reveal">
+
+        <div class="cert-card">
+          <div class="cert-logo">🌐</div>
+          <h3 class="cert-title">O Level — Web Dev & Publishing</h3>
+          <div class="cert-issuer">NIELIT (National Institute of Electronics & IT)</div>
+          <div class="cert-date">📅 Verified</div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-logo">🔒</div>
+          <h3 class="cert-title">Introduction to Cybersecurity</h3>
+          <div class="cert-issuer">Cisco Networking Academy</div>
+          <div class="cert-date">📅 Verified</div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-logo">🖧</div>
+          <h3 class="cert-title">Getting Started with Cisco Packet Tracer</h3>
+          <div class="cert-issuer">Cisco Networking Academy</div>
+          <div class="cert-date">📅 Verified</div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-logo">🤖</div>
+          <h3 class="cert-title">Digital Productivity with AI</h3>
+          <div class="cert-issuer">Microsoft</div>
+          <div class="cert-date">📅 Verified</div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-logo">📊</div>
+          <h3 class="cert-title">Data Science for Beginners</h3>
+          <div class="cert-issuer">Board Infinity</div>
+          <div class="cert-date">📅 Verified</div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-logo">🏆</div>
+          <h3 class="cert-title">Certificate of Excellence</h3>
+          <div class="cert-issuer">Pursuit Future Technology</div>
+          <div class="cert-date">📅 Apr 2026</div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-logo">📋</div>
+          <h3 class="cert-title">Certificate of Internship Completion</h3>
+          <div class="cert-issuer">Pursuit Future Technology</div>
+          <div class="cert-date">📅 Apr 2026</div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-logo">💻</div>
+          <h3 class="cert-title">Full-Stack Development</h3>
+          <div class="cert-issuer">Pursuit Future Technology</div>
+          <div class="cert-date">📅 Verified</div>
+        </div>
+
+      </div>
+
+      <!-- TryHackMe -->
+      <div class="certs-section-title reveal">🕹 TryHackMe Platform</div>
+      <div class="thm-banner reveal">
+        <div class="thm-icon">🐦‍⬛</div>
+        <div class="thm-info">
+          <h3>BlackBird47</h3>
+          <p>Active hacker on <a href="https://tryhackme.com/p/BlackBird47" target="_blank">TryHackMe</a> — solving rooms across web hacking, network security, OSINT, cryptography, and forensics.</p>
+          <div class="thm-stat">
+            <div class="thm-stat-item"><span class="thm-stat-num">80+</span><span class="thm-stat-lbl">Rooms Solved</span></div>
+            <div class="thm-stat-item"><span class="thm-stat-num">Top 5%</span><span class="thm-stat-lbl">Global Rank</span></div>
+            <div class="thm-stat-item"><span class="thm-stat-num">CTF</span><span class="thm-stat-lbl">Active Player</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Google Developer Badges -->
+      <div class="certs-section-title reveal">🔵 Google Developer Badges
+        <a href="https://g.dev/shriyashmaurya" target="_blank" style="font-size:0.8rem;font-weight:500;color:var(--accent);margin-left:0.5rem;text-transform:none;letter-spacing:0;">g.dev/shriyashmaurya ↗</a>
+      </div>
+
+      <div class="badges-grid reveal">
+
+        <div class="badge-card">
+          <div class="badge-icon">🤖</div>
+          <div class="badge-info">
+            <div class="badge-name">Deploy Faster Generative AI models with NVIDIA NIM on GKE</div>
+            <div class="badge-date">Dec 26, 2025</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">👥</div>
+          <div class="badge-info">
+            <div class="badge-name">Google Developer Group member</div>
+            <div class="badge-date">Oct 29, 2025</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">☁</div>
+          <div class="badge-info">
+            <div class="badge-name">Google Cloud & NVIDIA community member</div>
+            <div class="badge-date">Jul 30, 2025</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">🔥</div>
+          <div class="badge-info">
+            <div class="badge-name">Firebase Studio Developer Community</div>
+            <div class="badge-date">Jul 30, 2025</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">⭐</div>
+          <div class="badge-info">
+            <div class="badge-name">Google Developer Experts follower</div>
+            <div class="badge-date">Apr 19, 2024</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">📍</div>
+          <div class="badge-info">
+            <div class="badge-name">GDG Ludhiana Member</div>
+            <div class="badge-date">May 23, 2026</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">📍</div>
+          <div class="badge-info">
+            <div class="badge-name">GDG Cloud Motihari Member</div>
+            <div class="badge-date">May 23, 2026</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">🎪</div>
+          <div class="badge-info">
+            <div class="badge-name">I/O 2026 — Registered</div>
+            <div class="badge-date">May 23, 2026</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">💎</div>
+          <div class="badge-info">
+            <div class="badge-name">Gemini Enterprise Agent Ready</div>
+            <div class="badge-date">May 23, 2026</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">🏅</div>
+          <div class="badge-info">
+            <div class="badge-name">Google Developer Program — Premium Tier</div>
+            <div class="badge-date">Apr 16, 2026</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">🎓</div>
+          <div class="badge-info">
+            <div class="badge-name">Google Developer Group on Campus member</div>
+            <div class="badge-date">Dec 26, 2025</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">🏫</div>
+          <div class="badge-info">
+            <div class="badge-name">GDG on Campus RamdeoBaba University — Nagpur Member</div>
+            <div class="badge-date">Dec 26, 2025</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">📖</div>
+          <div class="badge-info">
+            <div class="badge-name">Code Wiki</div>
+            <div class="badge-date">Dec 26, 2025</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">📚</div>
+          <div class="badge-info">
+            <div class="badge-name">Learning (×4)</div>
+            <div class="badge-date">Dec 26, 2025</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">🔭</div>
+          <div class="badge-info">
+            <div class="badge-name">Google Developer Group discovery</div>
+            <div class="badge-date">Dec 3, 2025</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">🎨</div>
+          <div class="badge-info">
+            <div class="badge-name">Completed Living Canvas — Generative AI web puzzle</div>
+            <div class="badge-date">Jul 30, 2025</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">🗺</div>
+          <div class="badge-info">
+            <div class="badge-name">Google Maps Platform Innovators</div>
+            <div class="badge-date">Jul 30, 2025</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">🗄</div>
+          <div class="badge-info">
+            <div class="badge-name">Completed Grounded agents with Firebase Data Connect</div>
+            <div class="badge-date">Jul 29, 2025</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">🎯</div>
+          <div class="badge-info">
+            <div class="badge-name">First Learning Pathway and Quiz Badge</div>
+            <div class="badge-date">Aug 29, 2024</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">🔬</div>
+          <div class="badge-info">
+            <div class="badge-name">Firebase Data Connect Private Preview Program</div>
+            <div class="badge-date">Aug 29, 2024</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">🎪</div>
+          <div class="badge-info">
+            <div class="badge-name">Discovered DevFest 2023</div>
+            <div class="badge-date">Apr 21, 2024</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">🎪</div>
+          <div class="badge-info">
+            <div class="badge-name">I/O 2024 — Registered</div>
+            <div class="badge-date">Apr 21, 2024</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">✨</div>
+          <div class="badge-info">
+            <div class="badge-name">Getting started with Google AI Studio, Gemini AI & NodeJS</div>
+            <div class="badge-date">Mar 6, 2024</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">👁</div>
+          <div class="badge-info">
+            <div class="badge-name">Leveraging Gemini Pro Vision for image understanding & multimodal prompts</div>
+            <div class="badge-date">Mar 6, 2024</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">👩‍💻</div>
+          <div class="badge-info">
+            <div class="badge-name">Women Techmakers member</div>
+            <div class="badge-date">Mar 6, 2024</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">🚀</div>
+          <div class="badge-info">
+            <div class="badge-name">Google Cloud Innovator</div>
+            <div class="badge-date">Mar 6, 2024</div>
+          </div>
+        </div>
+
+        <div class="badge-card">
+          <div class="badge-icon">🌟</div>
+          <div class="badge-info">
+            <div class="badge-name">Joined the Google Developer Program</div>
+            <div class="badge-date">Mar 6, 2024</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <footer class="site-footer">
+      <p class="footer-copy">© 2025 <strong>Shriyash Kumar Maurya</strong></p>
+      <nav class="footer-nav">
+        <a href="../index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </footer>
+  </div>
+
+  <div id="toast"></div>
+  <script src="../js/main.js"></script>
+</body>
+</html>

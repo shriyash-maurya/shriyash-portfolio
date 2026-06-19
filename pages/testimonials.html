@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials — Shriyash Kumar Maurya</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body data-page="testimonials">
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <nav class="navbar">
+    <a class="nav-logo" href="../index.html">SKM<span>.</span></a>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="../index.html"       data-page="home">Home</a></li>
+      <li><a href="about.html"          data-page="about">About</a></li>
+      <li><a href="resume.html"         data-page="resume">Resume</a></li>
+      <li><a href="projects.html"       data-page="projects">Projects</a></li>
+      <li><a href="certificates.html"   data-page="certificates">Certificates</a></li>
+      <li><a href="blog.html"           data-page="blog">Blog</a></li>
+      <li><a href="testimonials.html"   data-page="testimonials">Testimonials</a></li>
+      <li><a href="contact.html"        data-page="contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-status"><div class="status-dot"></div>Available for Work</div>
+      <button class="nav-hamburger" id="nav-toggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+    <div class="container">
+
+      <div class="section-head reveal">
+        <div class="section-eyebrow">06 — Testimonials</div>
+        <h1 class="section-title">What People <em>Say</em></h1>
+        <p class="section-sub">Feedback from professors, peers, and collaborators.</p>
+      </div>
+
+      <!-- Static testimonials -->
+      <div class="testimonials-grid">
+
+        <div class="t-card reveal">
+          <div class="quote-mark">"</div>
+          <p class="t-text">Shriyash demonstrated exceptional understanding of network security concepts. His intrusion detection project was one of the best I've reviewed in my entire teaching career.</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background:#7c3aed">RP</div>
+            <div>
+              <div class="t-name">Prof. Rajiv Pandey</div>
+              <div class="t-role">Professor, KIT Varanasi — CS Dept.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card reveal delay-1">
+          <div class="quote-mark">"</div>
+          <p class="t-text">I collaborated with Shriyash on a web project and was amazed by his attention to security details. He caught three critical vulnerabilities I had completely overlooked. Highly recommend!</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background:#00d4ff; color:#000">AK</div>
+            <div>
+              <div class="t-name">Ankit Kumar</div>
+              <div class="t-role">Fellow BCA Student &amp; Dev Collaborator</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card reveal delay-2">
+          <div class="quote-mark">"</div>
+          <p class="t-text">Shriyash built our shop's website from scratch and added security features we didn't even know we needed. Very professional, delivered on time, and the site has been running perfectly since!</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background:#10b981">RG</div>
+            <div>
+              <div class="t-name">Ramesh Gupta</div>
+              <div class="t-role">Local Business Owner, Varanasi</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card reveal">
+          <div class="quote-mark">"</div>
+          <p class="t-text">One of the most dedicated and curious students I've seen. Shriyash always goes beyond the syllabus — his self-learning attitude in ethical hacking sets him apart from his peers.</p>
+          <div class="t-author">
+            <div class="t-avatar" style="background:#f59e0b; color:#000">SM</div>
+            <div>
+              <div class="t-name">Dr. Sunita Mishra</div>
+              <div class="t-role">HOD — Computer Science, KIT</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Dynamic testimonials from localStorage -->
+      <div class="testimonials-grid" id="dynamic-testimonials"></div>
+
+      <!-- Add testimonial form -->
+      <div class="add-t-form reveal">
+        <h3>+ Share Your Experience</h3>
+        <form id="t-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name *</label>
+              <input type="text" id="t-name" placeholder="Full name" required>
+            </div>
+            <div class="form-group">
+              <label>Your Role</label>
+              <input type="text" id="t-role" placeholder="Professor, Colleague, Client...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Your Message *</label>
+            <textarea id="t-msg" rows="4" placeholder="Share your experience working with Shriyash..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Testimonial</button>
+        </form>
+      </div>
+
+    </div>
+
+    <footer class="site-footer">
+      <p class="footer-copy">© 2025 <strong>Shriyash Kumar Maurya</strong></p>
+      <nav class="footer-nav">
+        <a href="../index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </footer>
+  </div>
+
+  <div id="toast"></div>
+  <script src="../js/main.js"></script>
+  <script src="../js/testimonials.js"></script>
+</body>
+</html>

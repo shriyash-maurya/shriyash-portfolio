@@ -1,0 +1,153 @@
+/* ========================================
+   ABOUT.CSS — About Page Styles
+   ======================================== */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 64px;
+  padding-bottom: 80px;
+}
+
+/* ---- Left Column ---- */
+.about-bio p {
+  color: var(--text2);
+  font-size: 14px;
+  line-height: 1.95;
+  margin-bottom: 22px;
+}
+.about-bio p strong { color: var(--accent); font-weight: 400; }
+
+.about-info-list {
+  margin-top: 36px;
+}
+.about-info-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.about-info-list .lbl {
+  width: 96px;
+  flex-shrink: 0;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text3);
+  padding-top: 1px;
+}
+.about-info-list .val { color: var(--text); }
+.about-info-list .val a { color: var(--accent); }
+.about-info-list .val.available { color: var(--accent3); }
+
+/* ---- Skill Bars ---- */
+.skill-bars-section { margin-top: 48px; }
+.skill-bars-section h3 {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 28px;
+}
+.sbar-item { margin-bottom: 20px; }
+.sbar-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.sbar-name { font-size: 12px; letter-spacing: 0.5px; color: var(--text); text-transform: uppercase; }
+.sbar-pct  { font-size: 11px; color: var(--accent); font-weight: 700; }
+.sbar-track {
+  height: 3px;
+  background: var(--surface2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.sbar-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  transition: width 1.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---- Right Column ---- */
+.about-panels {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius2);
+  padding: 26px;
+  transition: border-color var(--t-med);
+}
+.about-panel:hover { border-color: var(--border2); }
+.about-panel h4 {
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+/* Timeline inside panels */
+.mini-timeline { list-style: none; }
+.mini-timeline li {
+  position: relative;
+  padding: 0 0 18px 22px;
+  border-left: 1px solid var(--border);
+}
+.mini-timeline li:last-child { padding-bottom: 0; }
+.mini-timeline li::before {
+  content: '';
+  position: absolute;
+  left: -4px; top: 4px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+}
+.mt-year  { font-size: 10px; color: var(--accent); letter-spacing: 1px; margin-bottom: 4px; }
+.mt-event { font-size: 13px; color: var(--text); }
+.mt-place { font-size: 12px; color: var(--text3); margin-top: 2px; }
+
+/* Interest tags grid */
+.interest-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.interest-item {
+  padding: 9px 12px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 12px;
+  color: var(--text2);
+  text-align: center;
+  transition: all var(--t-fast);
+}
+.interest-item:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Achievement items */
+.achievement-item {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 12px;
+}
+.achievement-item:last-child { border-bottom: none; }
+.ach-icon { font-size: 18px; flex-shrink: 0; }
+.ach-title { font-size: 13px; color: var(--text); }
+.ach-sub   { font-size: 11px; color: var(--text3); margin-top: 2px; }
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+}
