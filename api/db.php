@@ -6,7 +6,7 @@ header("Content-Type: application/json; charset=UTF-8");
 $host = getenv('DB_HOST');
 $user = getenv('DB_USER');
 $pass = getenv('DB_PASSWORD');
-$dbname = getenv('DB_NAME') ?: 'portfolio_db';
+$dbname = getenv('DB_NAME') ?: 'test'; // Use the default cloud database namespace
 $port = getenv('DB_PORT') ?: 4000;
 
 // 1. Initialize MySQLi connection object
@@ -23,7 +23,7 @@ if (!$conn->real_connect($host, $user, $pass, $dbname, $port, NULL, MYSQLI_CLIEN
     die(json_encode(["error" => "Database Connection Failed: " . mysqli_connect_error()]));
 }
 
-// --- AUTOMATIC SCHEMA CREATION (Your Original Logic, Safe for Cloud) ---
+// --- AUTOMATIC SCHEMA CREATION (No "CREATE DATABASE" query to prevent security rejection) ---
 
 $conn->query("CREATE TABLE IF NOT EXISTS testimonials (
     id INT AUTO_INCREMENT PRIMARY KEY,
