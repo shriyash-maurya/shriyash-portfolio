@@ -1,13 +1,29 @@
 <?php
-$host = 'localhost';
-$user = 'root';
-$pass = '123';
-$dbname = 'portfolio_db';
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
 
-$conn = new mysqli($host, $user, $pass, $dbname);
-if ($conn->connect_error) {
-    die('Connection failed: ' . $conn->connect_error);
+// Securely grab your TiDB Cloud credentials from Vercel's Environment Variables
+$host = getenv('DB_HOST');
+$user = getenv('DB_USER');
+$pass = getenv('DB_PASSWORD');
+$dbname = getenv('DB_NAME') ?: 'portfolio_db';
+$port = getenv('DB_PORT') ?: 4000;
+
+// 1. Initialize MySQLi connection object
+$conn = mysqli_init();
+if (!$conn) {
+    die(json_encode(["error" => "mysqli_init failed"]));
 }
+
+// 2. Clear SSL configurations to prep for TiDB Cloud mandatory secure handshake
+$conn->ssl_set(NULL, NULL, NULL, NULL, NULL);
+
+// 3. Connect using SSL flag
+if (!$conn->real_connect($host, $user, $pass, $dbname, $port, NULL, MYSQLI_CLIENT_SSL)) {
+    die(json_encode(["error" => "Database Connection Failed: " . mysqli_connect_error()]));
+}
+
+// --- AUTOMATIC SCHEMA CREATION (Your Original Logic, Safe for Cloud) ---
 
 $conn->query("CREATE TABLE IF NOT EXISTS testimonials (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -58,11 +74,13 @@ $conn->query("CREATE TABLE IF NOT EXISTS certificates (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )");
 
+// Insert default credentials securely
 $defaultHash = password_hash('mypass@123', PASSWORD_DEFAULT);
 $defaultHash = $conn->real_escape_string($defaultHash);
 $conn->query("INSERT INTO admin_users (username, password_hash) VALUES ('sanu', '$defaultHash')
 ON DUPLICATE KEY UPDATE username = VALUES(username), password_hash = VALUES(password_hash)");
 
+// Seed blogs if table is completely empty
 $blogCountResult = $conn->query("SELECT COUNT(*) AS cnt FROM blog_posts");
 $blogCount = $blogCountResult ? (int)$blogCountResult->fetch_assoc()['cnt'] : 0;
 if ($blogCount === 0) {
@@ -76,6 +94,7 @@ if ($blogCount === 0) {
     ('What I Learned Building My First Full-Stack Web App', 'dev', 'Lessons from building an end-to-end application that combined frontend design, backend logic, and deployment.', 'Lessons from building an end-to-end application that combined frontend design, backend logic, and deployment. This post covers planning, API design, debugging, and the importance of keeping user experience simple.')");
 }
 
+// Seed projects if table is completely empty
 $projectCountResult = $conn->query("SELECT COUNT(*) AS cnt FROM projects");
 $projectCount = $projectCountResult ? (int)$projectCountResult->fetch_assoc()['cnt'] : 0;
 if ($projectCount === 0) {
