@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login — Shriyash Kumar Maurya</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body data-page="admin-login">
+  <div class="page-wrapper">
+    <div class="container">
+      <div class="admin-login-shell">
+        <div class="admin-login-card reveal">
+          <div class="section-eyebrow">Admin Access</div>
+          <h1 class="section-title">Login to <em>Dashboard</em></h1>
+          <form id="loginForm" class="admin-form">
+            <label>
+              Username
+              <input type="text" name="username" placeholder="admin" required>
+            </label>
+            <label>
+              Password
+              <input type="password" name="password" placeholder="••••••••" required>
+            </label>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+          <p id="loginMessage" class="admin-message"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

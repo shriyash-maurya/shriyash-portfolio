@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — Shriyash Kumar Maurya</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body data-page="admin-dashboard">
+  <div class="page-wrapper">
+    <div class="container">
+      <div class="admin-shell reveal">
+        <div class="admin-panel-head">
+          <div>
+            <div class="section-eyebrow">Admin Panel</div>
+            <h1 class="section-title">Manage <em>Content</em></h1>
+          </div>
+          <button id="logoutBtn" class="btn btn-ghost">Logout</button>
+        </div>
+
+        <section class="admin-panel-grid">
+          <div class="admin-card">
+            <h3 id="formTitle">Add New Project</h3>
+            <form id="projectForm" class="admin-form">
+              <input type="hidden" id="projectId" value="">
+              <label>Title<input type="text" id="title" required></label>
+              <label>Description<textarea id="description" rows="4" required></textarea></label>
+              <label>Category
+                <select id="category">
+                  <option value="security">Security</option>
+                  <option value="web">Web Dev</option>
+                  <option value="tool">Tools</option>
+                </select>
+              </label>
+              <label>Period<input type="text" id="period" placeholder="Jan 2025 — Aug 2025"></label>
+              <label>Icon (emoji)<input type="text" id="icon" placeholder="🤖"></label>
+              <label>GitHub URL<input type="url" id="githubUrl" placeholder="https://github.com/username/repo"></label>
+              <label>Live URL<input type="url" id="liveUrl" placeholder="https://example.com"></label>
+              <label>Stack (comma separated)<input type="text" id="stack" placeholder="Python, OpenCV, AI/ML"></label>
+              <label class="admin-checkbox"><input type="checkbox" id="featured">Mark as featured</label>
+              <button type="submit" class="btn btn-primary">Save Project</button>
+            </form>
+            <p id="projectMessage" class="admin-message"></p>
+          </div>
+
+          <div class="admin-card">
+            <h3>Project List</h3>
+            <div class="admin-toolbar">
+              <input type="search" id="projectSearch" placeholder="Search projects..." />
+              <select id="projectFilter">
+                <option value="all">All</option>
+                <option value="security">Security</option>
+                <option value="web">Web Dev</option>
+                <option value="tool">Tools</option>
+              </select>
+            </div>
+            <div id="projectList" class="admin-list"></div>
+            <div id="projectPagination" class="admin-pagination"></div>
+          </div>
+        </section>
+
+        <section class="admin-panel-grid" style="margin-top:24px;">
+          <div class="admin-card">
+            <h3 id="blogFormTitle">Add New Blog Post</h3>
+            <form id="blogForm" class="admin-form">
+              <input type="hidden" id="blogId" value="">
+              <label>Title<input type="text" id="blogTitle" required></label>
+              <label>Category
+                <select id="blogCategory">
+                  <option value="security">Security</option>
+                  <option value="dev">Dev</option>
+                  <option value="tips">Tips</option>
+                </select>
+              </label>
+              <label>Excerpt<textarea id="blogExcerpt" rows="3" required></textarea></label>
+              <label>Content<textarea id="blogContent" rows="6"></textarea></label>
+              <button type="submit" class="btn btn-primary">Save Blog Post</button>
+            </form>
+            <p id="blogMessage" class="admin-message"></p>
+          </div>
+
+          <div class="admin-card">
+            <h3>Blog Post List</h3>
+            <div class="admin-toolbar">
+              <input type="search" id="blogSearch" placeholder="Search blog posts..." />
+              <select id="blogFilter">
+                <option value="all">All</option>
+                <option value="security">Security</option>
+                <option value="dev">Dev</option>
+                <option value="tips">Tips</option>
+              </select>
+            </div>
+            <div id="blogList" class="admin-list"></div>
+            <div id="blogPagination" class="admin-pagination"></div>
+          </div>
+        </section>
+
+        <section class="admin-panel-grid" style="margin-top:24px;">
+          <div class="admin-card">
+            <h3 id="certificateFormTitle">Add New Certificate</h3>
+            <form id="certificateForm" class="admin-form" enctype="multipart/form-data">
+              <input type="hidden" id="certificateId" value="">
+              <label>Title<input type="text" id="certificateTitle" required></label>
+              <label>Issuer<input type="text" id="certificateIssuer" required></label>
+              <label>Issue Date<input type="text" id="certificateDate" placeholder="Jun 2026"></label>
+              <label>Icon (emoji)<input type="text" id="certificateIcon" placeholder="🏆"></label>
+              <label>Upload Certificate File<input type="file" id="certificateFile" accept=".pdf,.png,.jpg,.jpeg,.webp"></label>
+              <label>Or External Link<input type="url" id="certificateExternalUrl" placeholder="https://example.com/certificate.pdf"></label>
+              <button type="submit" class="btn btn-primary">Save Certificate</button>
+            </form>
+            <p id="certificateMessage" class="admin-message"></p>
+          </div>
+
+          <div class="admin-card">
+            <h3>Certificate List</h3>
+            <div id="certificateList" class="admin-list"></div>
+            <div id="certificatePagination" class="admin-pagination"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

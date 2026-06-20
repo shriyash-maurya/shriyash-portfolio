@@ -44,79 +44,26 @@
 
         <!-- Posts -->
         <div>
-          <div class="blog-list">
-
-            <article class="blog-card reveal">
-              <div class="blog-meta">
-                <span class="blog-cat security">Security</span>
-                <span class="blog-date">Nov 15, 2024</span>
-              </div>
-              <h3 class="blog-title">How I Solved My First CTF Challenge on TryHackMe</h3>
-              <p class="blog-excerpt">A step-by-step walkthrough of the "RootMe" room — from Nmap recon to privilege escalation on a Linux machine. A perfect guide for beginners getting started in CTF.</p>
-              <span class="read-link">Read More →</span>
-            </article>
-
-            <article class="blog-card reveal delay-1">
-              <div class="blog-meta">
-                <span class="blog-cat dev">Dev</span>
-                <span class="blog-date">Sep 28, 2024</span>
-              </div>
-              <h3 class="blog-title">Building a Secure REST API with Node.js and JWT Auth</h3>
-              <p class="blog-excerpt">Security is an afterthought in most API tutorials. This post covers JWT authentication, rate limiting, input sanitization, and CORS hardening from day one.</p>
-              <span class="read-link">Read More →</span>
-            </article>
-
-            <article class="blog-card reveal delay-2">
-              <div class="blog-meta">
-                <span class="blog-cat tips">Tips</span>
-                <span class="blog-date">Aug 10, 2024</span>
-              </div>
-              <h3 class="blog-title">10 Linux Terminal Commands Every Security Researcher Must Know</h3>
-              <p class="blog-excerpt">From netstat to tcpdump and beyond — these terminal commands will save you hours during security assessments. Real examples from my pen testing practice.</p>
-              <span class="read-link">Read More →</span>
-            </article>
-
-            <article class="blog-card reveal">
-              <div class="blog-meta">
-                <span class="blog-cat security">Security</span>
-                <span class="blog-date">Jun 5, 2024</span>
-              </div>
-              <h3 class="blog-title">Understanding SQL Injection — A Practical Guide</h3>
-              <p class="blog-excerpt">SQL injection is still the #1 web vulnerability. This post explains classic, blind, and time-based SQLi with real code examples and how to prevent them properly.</p>
-              <span class="read-link">Read More →</span>
-            </article>
-
-            <!-- Dynamic posts from localStorage -->
-            <div id="dynamic-posts"></div>
-
+          <div class="blog-controls reveal">
+            <input type="search" id="blogSearch" class="search-input" placeholder="Search posts..." />
+            <select id="blogFilter" class="filter-select">
+              <option value="all">All categories</option>
+              <option value="security">Security</option>
+              <option value="dev">Dev</option>
+              <option value="tips">Tips</option>
+            </select>
           </div>
+          <div class="blog-list" id="blogList"></div>
+          <div id="blogPagination" class="admin-pagination"></div>
         </div>
 
         <!-- Sidebar -->
         <aside class="blog-sidebar">
 
-          <!-- Write a Post -->
+          <!-- Admin-managed posts -->
           <div class="sidebar-panel reveal">
-            <h4>✍ Write a Post</h4>
-            <form id="blog-form">
-              <div class="form-group">
-                <label>Title</label>
-                <input type="text" id="b-title" placeholder="Your post title...">
-              </div>
-              <div class="form-group">
-                <label>Category</label>
-                <select id="b-cat">
-                  <option value="security">Security</option>
-                  <option value="dev">Dev</option>
-                  <option value="tips">Tips</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Excerpt</label>
-                <textarea id="b-excerpt" rows="4" placeholder="Short description of your post..."></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary" style="width:100%">Publish Post</button>
-            </form>
+            <h4>🛠 Admin Managed</h4>
+            <p style="font-size:0.92rem;color:var(--text2);line-height:1.8;">Blog posts are now managed from the admin dashboard so updates stay consistent across the site.</p>
           </div>
 
           <!-- Stats -->

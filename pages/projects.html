@@ -40,212 +40,26 @@
         <p class="section-sub">Security tools, web applications, and software projects.</p>
       </div>
 
-      <!-- Filter -->
-      <div class="projects-filter reveal">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="security">Security</button>
-        <button class="filter-btn" data-filter="web">Web Dev</button>
-        <button class="filter-btn" data-filter="tool">Tools</button>
+      <div class="projects-controls reveal">
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="security">Security</button>
+          <button class="filter-btn" data-filter="web">Web Dev</button>
+          <button class="filter-btn" data-filter="tool">Tools</button>
+        </div>
+        <div class="projects-toolbar-right">
+          <input type="search" id="projectSearch" class="search-input" placeholder="Search projects..." />
+          <select id="projectCategory" class="filter-select">
+            <option value="all">All categories</option>
+            <option value="security">Security</option>
+            <option value="web">Web Dev</option>
+            <option value="tool">Tools</option>
+          </select>
+        </div>
       </div>
 
-      <!-- Grid -->
-      <div class="projects-grid">
-
-        <div class="project-card reveal" data-cat="security" style="transition:all 0.3s">
-          <span class="featured-label">Featured</span>
-          <div class="project-card-top">
-            <div class="project-icon" style="background:rgba(255,107,107,0.12)">🤖</div>
-            <div class="project-links">
-              <a class="proj-link" href="#" title="GitHub">⌥</a>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-title">Automated Attendance System (Face Recognition)</h3>
-            <p class="project-desc">AI-powered CCTV attendance system achieving 98% face detection accuracy for 50+ students. Implemented multi-step verification to ensure full class duration presence. Led a 4-member team at All India Hackathon — won at college level and represented institution nationally.</p>
-            <div class="project-meta" style="font-size:0.78rem;color:var(--muted);margin-bottom:0.5rem;">Jan 2025 — Feb 2025</div>
-            <div class="project-stack">
-              <span class="chip chip-red">Python</span>
-              <span class="chip">OpenCV</span>
-              <span class="chip">Face Recognition</span>
-              <span class="chip chip-purple">AI/ML</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal delay-1" data-cat="web" style="transition:all 0.3s">
-          <span class="featured-label">Featured</span>
-          <div class="project-card-top">
-            <div class="project-icon" style="background:rgba(16,185,129,0.10)">🏫</div>
-            <div class="project-links">
-              <a class="proj-link" href="#" title="GitHub">⌥</a>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-title">School Management System</h3>
-            <p class="project-desc">Full-featured system managing 500+ student records for attendance, grades, and administration. Used CRUD operations and database integration to reduce administrative workload by 50%.</p>
-            <div class="project-meta" style="font-size:0.78rem;color:var(--muted);margin-bottom:0.5rem;">Jan 2025 — Aug 2025</div>
-            <div class="project-stack">
-              <span class="chip chip-purple">JavaScript</span>
-              <span class="chip">SQL</span>
-              <span class="chip">HTML/CSS</span>
-              <span class="chip">CRUD</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal delay-2" data-cat="tool" style="transition:all 0.3s">
-          <div class="project-card-top">
-            <div class="project-icon" style="background:rgba(245,158,11,0.10)">📄</div>
-            <div class="project-links">
-              <a class="proj-link" href="#">⌥</a>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-title">ATS Resume Finder using AI</h3>
-            <p class="project-desc">AI-powered resume analyzer increasing ATS compatibility scores by up to 35% via NLP-based keyword matching. Tested on 100+ resumes to improve job application effectiveness.</p>
-            <div class="project-meta" style="font-size:0.78rem;color:var(--muted);margin-bottom:0.5rem;">Mar 2025 — May 2025</div>
-            <div class="project-stack">
-              <span class="chip chip-red">Python</span>
-              <span class="chip chip-purple">NLP</span>
-              <span class="chip">AI/ML</span>
-              <span class="chip">Flask</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal" data-cat="tool" style="transition:all 0.3s">
-          <div class="project-card-top">
-            <div class="project-icon" style="background:rgba(0,212,255,0.10)">📊</div>
-            <div class="project-links">
-              <a class="proj-link" href="#">⌥</a>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-title">Video Playback from Excel & Google Sheets</h3>
-            <p class="project-desc">Tool to trigger video playback from Excel and Google Sheets data for 3 internal use cases. Integrated Google Sheets API for real-time data fetching and automation, cutting manual setup time by 60%.</p>
-            <div class="project-meta" style="font-size:0.78rem;color:var(--muted);margin-bottom:0.5rem;">Sep 2025 — Nov 2025</div>
-            <div class="project-stack">
-              <span class="chip chip-purple">JavaScript</span>
-              <span class="chip chip-cyan">Google Sheets API</span>
-              <span class="chip">Automation</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal delay-1" data-cat="security" style="transition:all 0.3s">
-          <div class="project-card-top">
-            <div class="project-icon" style="background:rgba(124,58,237,0.10)">🕵</div>
-            <div class="project-links">
-              <a class="proj-link" href="#">⌥</a>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-title">OSINT Tool</h3>
-            <p class="project-desc">Developed an OSINT (Open Source Intelligence) tool for information gathering and reconnaissance. Aggregates social footprints, domain WHOIS, email breach data, and subdomain enumeration for security research.</p>
-            <div class="project-stack">
-              <span class="chip chip-red">Python</span>
-              <span class="chip">OSINT</span>
-              <span class="chip">Recon</span>
-              <span class="chip">CLI</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal" data-cat="web" style="transition:all 0.3s">
-          <div class="project-card-top">
-            <div class="project-icon" style="background:rgba(16,185,129,0.10)">🔐</div>
-            <div class="project-links">
-              <a class="proj-link" href="#">⌥</a>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-title">Secure Chat Application</h3>
-            <p class="project-desc">End-to-end encrypted messaging app with AES-256 encryption and RSA key exchange. Built with React.js frontend and Node.js WebSocket backend with secure auth and message integrity verification.</p>
-            <div class="project-stack">
-              <span class="chip chip-purple">React.js</span>
-              <span class="chip chip-purple">Node.js</span>
-              <span class="chip chip-red">AES-256</span>
-              <span class="chip">MongoDB</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal delay-1" data-cat="web" style="transition:all 0.3s">
-          <div class="project-card-top">
-            <div class="project-icon" style="background:rgba(0,212,255,0.10)">🛒</div>
-            <div class="project-links">
-              <a class="proj-link" href="#">↗</a>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-title">E-Commerce Web Application</h3>
-            <p class="project-desc">Full-stack e-commerce platform with user authentication, product catalog, cart management and payment gateway integration. Includes admin dashboard for order and inventory management.</p>
-            <div class="project-stack">
-              <span class="chip chip-purple">React.js</span>
-              <span class="chip chip-purple">Node.js</span>
-              <span class="chip chip-cyan">Express.js</span>
-              <span class="chip">MySQL</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal delay-2" data-cat="security" style="transition:all 0.3s">
-          <div class="project-card-top">
-            <div class="project-icon" style="background:rgba(239,68,68,0.10)">🕷</div>
-            <div class="project-links">
-              <a class="proj-link" href="#">⌥</a>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-title">Web Vulnerability Scanner</h3>
-            <p class="project-desc">Automated scanner detecting SQL injection, XSS, CSRF, and common CVEs in web apps. Generates structured HTML reports with CVSS severity ratings and remediation recommendations.</p>
-            <div class="project-stack">
-              <span class="chip chip-red">Python</span>
-              <span class="chip">Flask</span>
-              <span class="chip">BeautifulSoup</span>
-              <span class="chip">Requests</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal" data-cat="security" style="transition:all 0.3s">
-          <div class="project-card-top">
-            <div class="project-icon" style="background:rgba(255,107,107,0.12)">🛡</div>
-            <div class="project-links">
-              <a class="proj-link" href="#">⌥</a>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-title">Network Intrusion Detection System</h3>
-            <p class="project-desc">Real-time IDS monitoring network packets using Python and Scapy, flagging suspicious traffic patterns and generating detailed security alerts with an interactive dashboard.</p>
-            <div class="project-stack">
-              <span class="chip chip-red">Python</span>
-              <span class="chip">Scapy</span>
-              <span class="chip">SQLite</span>
-              <span class="chip">Tkinter</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal delay-1" data-cat="tool" style="transition:all 0.3s">
-          <div class="project-card-top">
-            <div class="project-icon" style="background:rgba(245,158,11,0.10)">🔑</div>
-            <div class="project-links">
-              <a class="proj-link" href="#">⌥</a>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-title">File Encryption Utility</h3>
-            <p class="project-desc">Desktop app for AES-256 file encryption and decryption with a drag-and-drop GUI. Supports batch processing and secure key management via password hashing.</p>
-            <div class="project-stack">
-              <span class="chip chip-red">Python</span>
-              <span class="chip">PyCryptodome</span>
-              <span class="chip">Tkinter</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
+      <div class="projects-grid" id="projectsGrid"></div>
+      <div id="projectPagination" class="admin-pagination"></div>
     </div>
 
     <footer class="site-footer">

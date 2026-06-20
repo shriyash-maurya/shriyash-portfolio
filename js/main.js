@@ -7,6 +7,15 @@
 (function () {
   const dot  = document.getElementById('cursor');
   const ring = document.getElementById('cursor-ring');
+  const isAdminPage = document.body?.dataset?.page === 'admin-dashboard' || document.body?.dataset?.page === 'admin-login';
+
+  if (isAdminPage) {
+    document.body.style.cursor = 'auto';
+    if (dot) dot.style.display = 'none';
+    if (ring) ring.style.display = 'none';
+    return;
+  }
+
   if (!dot || !ring) return;
 
   let mx = 0, my = 0, rx = 0, ry = 0;
@@ -32,9 +41,16 @@
 
 /* ---- Active Nav Link ---- */
 (function () {
-  const page = document.body.dataset.page;
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const currentPage = currentPath.replace(/\.html$/, '');
+
   document.querySelectorAll('.nav-menu a').forEach(a => {
-    if (a.dataset.page === page) a.classList.add('active');
+    const hrefPath = new URL(a.href, window.location.href).pathname.split('/').pop() || 'index.html';
+    const hrefPage = hrefPath.replace(/\.html$/, '');
+
+    if (hrefPage === currentPage || (currentPage === '' && hrefPage === 'index')) {
+      a.classList.add('active');
+    }
   });
 })();
 
